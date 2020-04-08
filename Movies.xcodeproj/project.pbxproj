@@ -10,9 +10,11 @@
 		748173D0243E3BE2009E55D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748173CF243E3BE2009E55D6 /* AppDelegate.swift */; };
 		748173D9243E3BE3009E55D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 748173D8243E3BE3009E55D6 /* Assets.xcassets */; };
 		748173DC243E3BE3009E55D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 748173DA243E3BE3009E55D6 /* LaunchScreen.storyboard */; };
-		748173E7243E3BE4009E55D6 /* MoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748173E6243E3BE4009E55D6 /* MoviesTests.swift */; };
 		748173F3243E3D07009E55D6 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748173F1243E3D07009E55D6 /* MovieListViewController.swift */; };
 		748173F6243E3E29009E55D6 /* MovieListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 748173F5243E3E29009E55D6 /* MovieListViewController.xib */; };
+		748173FA243E3F7E009E55D6 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748173F9243E3F7E009E55D6 /* APIClientTests.swift */; };
+		748173FC243E40AA009E55D6 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748173FB243E40AA009E55D6 /* APIClient.swift */; };
+		748173FF243E4195009E55D6 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748173FE243E4195009E55D6 /* Movies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,10 +34,12 @@
 		748173DB243E3BE3009E55D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		748173DD243E3BE3009E55D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		748173E2243E3BE4009E55D6 /* MoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		748173E6243E3BE4009E55D6 /* MoviesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTests.swift; sourceTree = "<group>"; };
 		748173E8243E3BE4009E55D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		748173F1243E3D07009E55D6 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		748173F5243E3E29009E55D6 /* MovieListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListViewController.xib; sourceTree = "<group>"; };
+		748173F9243E3F7E009E55D6 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		748173FB243E40AA009E55D6 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		748173FE243E4195009E55D6 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 		748173CE243E3BE2009E55D6 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				748173FD243E4150009E55D6 /* Model */,
+				748173F7243E3F55009E55D6 /* Network */,
 				748173CF243E3BE2009E55D6 /* AppDelegate.swift */,
 				748173D8243E3BE3009E55D6 /* Assets.xcassets */,
 				748173DA243E3BE3009E55D6 /* LaunchScreen.storyboard */,
@@ -90,10 +96,34 @@
 		748173E5243E3BE4009E55D6 /* MoviesTests */ = {
 			isa = PBXGroup;
 			children = (
-				748173E6243E3BE4009E55D6 /* MoviesTests.swift */,
+				748173F8243E3F5D009E55D6 /* Network */,
 				748173E8243E3BE4009E55D6 /* Info.plist */,
 			);
 			path = MoviesTests;
+			sourceTree = "<group>";
+		};
+		748173F7243E3F55009E55D6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				748173FB243E40AA009E55D6 /* APIClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		748173F8243E3F5D009E55D6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				748173F9243E3F7E009E55D6 /* APIClientTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		748173FD243E4150009E55D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				748173FE243E4195009E55D6 /* Movies.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +229,8 @@
 			files = (
 				748173D0243E3BE2009E55D6 /* AppDelegate.swift in Sources */,
 				748173F3243E3D07009E55D6 /* MovieListViewController.swift in Sources */,
+				748173FF243E4195009E55D6 /* Movies.swift in Sources */,
+				748173FC243E40AA009E55D6 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				748173E7243E3BE4009E55D6 /* MoviesTests.swift in Sources */,
+				748173FA243E3F7E009E55D6 /* APIClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
