@@ -70,7 +70,7 @@ extension MovieListViewController: UISearchBarDelegate {
 extension MovieListViewController: MovieListUI {
     
     func updateCell(at index: Int) {
-        
+        tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .fade)
     }
 }
 

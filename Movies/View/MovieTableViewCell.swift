@@ -24,7 +24,7 @@ class MovieTableViewCell: UITableViewCell {
     func configCell(with result: Result<Data?, Error>) {
         switch result {
         case .failure(_):
-            thumbnailImage.image = UIImage(named: "twitterLogo")
+            thumbnailImage.image = UIImage(named: "brokenThumbnail")
         case .success(let imageData):
             if let data = imageData {
                 thumbnailImage.image = UIImage(data: data)
