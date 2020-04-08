@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MovieTableViewCell" customModule="Movies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ygo-eJ-xBr">
+                        <rect key="frame" x="8" y="9" width="72" height="72"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ygo-eJ-xBr" secondAttribute="height" multiplier="1:1" id="YnN-Ye-nCO"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAj-cW-auw">
+                        <rect key="frame" x="90" y="9" width="220" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ll2-pW-99z">
+                        <rect key="frame" x="90" y="38" width="220" height="48"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="JfF-NW-hrw">
+                        <rect key="frame" x="34" y="35" width="20" height="20"/>
+                    </activityIndicatorView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="PAj-cW-auw" firstAttribute="top" secondItem="ygo-eJ-xBr" secondAttribute="top" id="2pZ-ex-c1m"/>
+                    <constraint firstItem="ygo-eJ-xBr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="68a-WW-dbI"/>
+                    <constraint firstItem="PAj-cW-auw" firstAttribute="leading" secondItem="ygo-eJ-xBr" secondAttribute="trailing" constant="10" id="AaB-80-fMl"/>
+                    <constraint firstItem="ll2-pW-99z" firstAttribute="leading" secondItem="ygo-eJ-xBr" secondAttribute="trailing" constant="10" id="Bdf-tT-A6H"/>
+                    <constraint firstAttribute="trailing" secondItem="ll2-pW-99z" secondAttribute="trailing" constant="10" id="Cez-aH-tii"/>
+                    <constraint firstItem="ygo-eJ-xBr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="WkM-k1-BNu"/>
+                    <constraint firstItem="JfF-NW-hrw" firstAttribute="centerY" secondItem="ygo-eJ-xBr" secondAttribute="centerY" id="cbx-aW-Abb"/>
+                    <constraint firstItem="ll2-pW-99z" firstAttribute="top" secondItem="PAj-cW-auw" secondAttribute="bottom" constant="8" id="eIv-NP-7Tt"/>
+                    <constraint firstItem="JfF-NW-hrw" firstAttribute="centerX" secondItem="ygo-eJ-xBr" secondAttribute="centerX" id="m0w-te-kJ0"/>
+                    <constraint firstAttribute="trailing" secondItem="PAj-cW-auw" secondAttribute="trailing" constant="10" id="mYD-IN-e7y"/>
+                    <constraint firstItem="ygo-eJ-xBr" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.8" id="tJP-gt-MEv"/>
+                    <constraint firstAttribute="bottom" secondItem="ll2-pW-99z" secondAttribute="bottom" constant="4" id="yqJ-Es-hiU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="indicator" destination="JfF-NW-hrw" id="qw4-lW-HfZ"/>
+                <outlet property="overviewLabel" destination="ll2-pW-99z" id="aZy-PM-rPf"/>
+                <outlet property="thumbnailImage" destination="ygo-eJ-xBr" id="JOf-HS-ThH"/>
+                <outlet property="titleLabel" destination="PAj-cW-auw" id="n08-Dx-cJR"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="108"/>
+        </tableViewCell>
+    </objects>
+</document>

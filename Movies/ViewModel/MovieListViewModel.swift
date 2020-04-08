@@ -33,6 +33,12 @@ class MovieListViewModelConcrete: MovieListViewModel {
     func getMovies(title: String, completion: @escaping (Error?) -> Void) {
         movies = nil
         cleanDownloadingImages()
+        apiClient.getMovies(with: title) { [weak self] (movies, error) in
+            if let strongSelf = self {
+                strongSelf.movies = movies
+            }
+            completion(error)
+        }
     }
     
     func getImage(path: String?, for index: Int) -> Result<Data?, Error> {
