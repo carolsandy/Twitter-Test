@@ -4,6 +4,8 @@ import UIKit
 class MovieListViewController: UIViewController {
     
     var tableView: UITableView!
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var label: UILabel!
     
     private var searchController: UISearchController!
     private var movieListViewModel: MovieListViewModel
@@ -20,6 +22,7 @@ class MovieListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchController()
+        setupNavigationBar()
         movieListViewModel.movieListUI = self
     }
     
@@ -30,6 +33,14 @@ class MovieListViewController: UIViewController {
         navigationItem.searchController = searchController
         definesPresentationContext = true
         searchController.searchBar.delegate = self
+    }
+    
+    private func setupNavigationBar() {
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "twitterLogo")
+        imageView.image = image
+        navigationItem.titleView = imageView
     }
     
     func prepareResultsView() {
@@ -53,12 +64,15 @@ extension MovieListViewController: UISearchBarDelegate {
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let search = searchBar.text, !search.isEmpty {
-            prepareResultsView()
             movieListViewModel.getMovies(title: search) { error in
                 if let _ = error {
-                    // TODO - show error on UI
+                    DispatchQueue.main.async {
+                        self.imageView.image = UIImage(named: "errorLogo")
+                        self.label.text = "Oops, try again later!"
+                    }
                 } else{
                     DispatchQueue.main.async {
+                        self.prepareResultsView()
                         self.tableView.reloadData()
                     }
                 }

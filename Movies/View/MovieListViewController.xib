@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -9,16 +9,86 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieListViewController" customModule="Movies" customModuleProvider="target">
             <connections>
+                <outlet property="imageView" destination="MBU-ew-vu3" id="UVj-XZ-aG4"/>
+                <outlet property="label" destination="ySX-7N-bfX" id="8YR-HR-zZy"/>
                 <outlet property="view" destination="iN0-l3-epB" id="U3d-Zq-TM3"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchMovie" translatesAutoresizingMaskIntoConstraints="NO" id="MBU-ew-vu3">
+                    <rect key="frame" x="324" y="72.5" width="248" height="248"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="MBU-ew-vu3" secondAttribute="height" multiplier="1:1" id="aJ8-EK-O75"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Look for a movie!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySX-7N-bfX">
+                    <rect key="frame" x="588" y="299.5" width="131" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ySX-7N-bfX" firstAttribute="top" secondItem="MBU-ew-vu3" secondAttribute="bottom" constant="61" id="21V-hN-UdT"/>
+                <constraint firstItem="ySX-7N-bfX" firstAttribute="width" secondItem="MBU-ew-vu3" secondAttribute="width" multiplier="0.126888" id="84D-Ub-HWL"/>
+                <constraint firstItem="MBU-ew-vu3" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.6" id="CYc-id-SiF"/>
+                <constraint firstItem="MBU-ew-vu3" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="GUl-Fu-ri9"/>
+                <constraint firstItem="MBU-ew-vu3" firstAttribute="leading" secondItem="ySX-7N-bfX" secondAttribute="trailing" constant="96" id="MG5-mf-xMD"/>
+                <constraint firstItem="MBU-ew-vu3" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Wdk-ai-TTF"/>
+                <constraint firstItem="ySX-7N-bfX" firstAttribute="leading" secondItem="MBU-ew-vu3" secondAttribute="trailing" constant="16" id="bcv-rK-q2b"/>
+                <constraint firstItem="ySX-7N-bfX" firstAttribute="height" secondItem="MBU-ew-vu3" secondAttribute="height" multiplier="0.084507" id="bdl-iL-SC5"/>
+                <constraint firstItem="MBU-ew-vu3" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="nNv-Q6-DwX"/>
+                <constraint firstItem="MBU-ew-vu3" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="tLn-EF-FpN"/>
+                <constraint firstItem="ySX-7N-bfX" firstAttribute="bottom" secondItem="MBU-ew-vu3" secondAttribute="bottom" id="tbC-Eg-K54"/>
+                <constraint firstItem="MBU-ew-vu3" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="vW5-f4-9u8"/>
+                <constraint firstItem="ySX-7N-bfX" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="zUX-9S-OZF"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="CYc-id-SiF"/>
+                    <exclude reference="GUl-Fu-ri9"/>
+                    <exclude reference="MG5-mf-xMD"/>
+                    <exclude reference="nNv-Q6-DwX"/>
+                    <exclude reference="tLn-EF-FpN"/>
+                    <exclude reference="vW5-f4-9u8"/>
+                    <exclude reference="21V-hN-UdT"/>
+                    <exclude reference="84D-Ub-HWL"/>
+                    <exclude reference="bcv-rK-q2b"/>
+                    <exclude reference="bdl-iL-SC5"/>
+                    <exclude reference="tbC-Eg-K54"/>
+                    <exclude reference="zUX-9S-OZF"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact-widthClass=regular">
+                <mask key="constraints">
+                    <include reference="CYc-id-SiF"/>
+                    <include reference="vW5-f4-9u8"/>
+                    <include reference="bcv-rK-q2b"/>
+                    <include reference="bdl-iL-SC5"/>
+                    <include reference="tbC-Eg-K54"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="GUl-Fu-ri9"/>
+                    <exclude reference="MG5-mf-xMD"/>
+                    <include reference="nNv-Q6-DwX"/>
+                    <exclude reference="tLn-EF-FpN"/>
+                    <include reference="21V-hN-UdT"/>
+                    <include reference="84D-Ub-HWL"/>
+                    <include reference="zUX-9S-OZF"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="136" y="145"/>
         </view>
     </objects>
+    <resources>
+        <image name="searchMovie" width="384" height="384"/>
+    </resources>
 </document>
