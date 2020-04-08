@@ -22,7 +22,7 @@ class MovieListViewModelConcrete: MovieListViewModel {
     private var apiClient: APIClient
     private var downloadingImages = [ImageLoader]()
     
-    init(apiClient: APIClient) {
+    init(apiClient: APIClient = APIClient()) {
         self.apiClient = apiClient
     }
     

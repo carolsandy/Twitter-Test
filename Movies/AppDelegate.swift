@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Movies
-//
-//  Created by Carmen Salvador on 4/8/20.
-//  Copyright © 2020 Carmen Salvador. All rights reserved.
-//
 
 import UIKit
 
@@ -22,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func provideMovieListViewController() -> UIViewController {
-        let movieListViewController = MovieListViewController()
+        let movieListViewController = MovieListViewController(viewModel: MovieListViewModelConcrete())
+        
         return UINavigationController(rootViewController: movieListViewController)
     }
 

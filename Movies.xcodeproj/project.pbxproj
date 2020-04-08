@@ -85,6 +85,7 @@
 		748173CE243E3BE2009E55D6 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				74817405243E5C6E009E55D6 /* View */,
 				74817402243E54AF009E55D6 /* ViewModel */,
 				748173FD243E4150009E55D6 /* Model */,
 				748173F7243E3F55009E55D6 /* Network */,
@@ -92,8 +93,6 @@
 				748173D8243E3BE3009E55D6 /* Assets.xcassets */,
 				748173DA243E3BE3009E55D6 /* LaunchScreen.storyboard */,
 				748173DD243E3BE3009E55D6 /* Info.plist */,
-				748173F1243E3D07009E55D6 /* MovieListViewController.swift */,
-				748173F5243E3E29009E55D6 /* MovieListViewController.xib */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -138,6 +137,15 @@
 				74817403243E54FD009E55D6 /* MovieListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		74817405243E5C6E009E55D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				748173F1243E3D07009E55D6 /* MovieListViewController.swift */,
+				748173F5243E3E29009E55D6 /* MovieListViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
